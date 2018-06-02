@@ -1,0 +1,8 @@
+Slides:
+https://drive.google.com/open?id=1_weC2drmqX9DdIV44TgtfzGRoH5_74-ZGp7Y8uldzbM
+
+Perguntas:
+goo.gl/slides/wtk83f
+
+Repo:
+https://github.com/gabriel-barreto/vue-js-training
