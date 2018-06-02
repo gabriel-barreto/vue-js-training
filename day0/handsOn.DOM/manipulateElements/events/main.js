@@ -10,15 +10,16 @@ HTMLDocument.prototype.getElement = function (selector) {
     return Array.prototype.slice.call(elements);
 };
 
-window.addEventListener('DOMContentLoaded', function () {
-    const [ myParagraph ] = document.getElement('.paragraph');
-    const [ myButton ] = document.getElement('.btn');
+function mostraSomeP () {
+    const [myParagraph] = document.getElement('.paragraph');
+    if (myParagraph.style.display == 'none') {
+        myParagraph.style.display = 'block';
+    } else {
+        myParagraph.style.display = 'none';
+    }
+}
 
-    myButton.addEventListener('click', function () {
-        if (myParagraph.style.display == 'none') {
-            myParagraph.style.display = 'block';
-        } else {
-            myParagraph.style.display = 'none';
-        }
-    });
+window.addEventListener('DOMContentLoaded', function () {
+    const [ myButton ] = document.getElement('.btn');
+    myButton.addEventListener('click', mostraSomeP());
 });
