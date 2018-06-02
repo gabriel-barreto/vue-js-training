@@ -8,6 +8,6 @@ String.prototype.reverse = function() {
 String.prototype.lorem = 'Lorem Ipsum';
 
 // --> See our prototypes working
-const str = 'I love js prototypes!';
+const str = 'Fabrica de Software';
 console.log(str.lorem);
 console.log(str.reverse());

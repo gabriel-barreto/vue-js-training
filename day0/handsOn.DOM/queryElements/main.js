@@ -13,6 +13,7 @@ HTMLDocument.prototype.getElement = function (selector) {
 // --> Exibindo o conteudo dos elementos encontrados!
 window.addEventListener('DOMContentLoaded', function() {
     const myParagraphs = document.getElement('.paragraph');
+    console.log(typeof myParagraphs);
     myParagraphs.map(function(each) {
         console.log(each.textContent);
     });
