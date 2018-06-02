@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .container {
+      border: 1px solid red;
+    }
+    .p {
+      color: red;
+    }
+  </style>
+  <div class="container">
+    <p>Lorem Ipsum</p>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const p = document.createElement('p');
+      p.textContent = 'Fabrica de Software';
+
+      const name = 'Gabriel';
+      const markup = `
+        <a href="#" title="Meu Link">${name}</a>
+        <p class='p'>
+          ${name}
+        </p>
+      `;
+
+      const [ container ] = document.getElementsByClassName('container');
+      container.insertAdjacentElement('afterend', p);
+      container.insertAdjacentHTML('beforebegin', markup);
+
+      setTimeout(() => {
+        p.remove();
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
